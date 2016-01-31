@@ -3,19 +3,18 @@
  * the DOM.
  *
  * @module index
- * @requires OptionBox, FilterList, EmailItem
+ * @requires OptionBox, SearchableEmailList, EmailItem
  */
 /*global ReactDOM*/
 
 import OptionBox from './components/OptionBox';
-import FilterList from './components/FilterList';
-import EmailItem from './components/EmailItem';
+import SearchableEmailList from './components/SearchableEmailList';
 import labels from './labels';
 
 
 var emails = [
-  {subject: 'Hey you!', body: 'This is a special offer'},
-  {subject: 'Look at this', body: 'You\'re an awesome person'}
+  {id: 1, subject: 'Hey you!', body: 'This is a special offer'},
+  {id: 2, subject: 'Look at this', body: 'You\'re an awesome person'}
 ];
 
 
@@ -23,7 +22,7 @@ var emails = [
 ReactDOM.render(
   <div>
     <OptionBox />
-    <FilterList items={emails} itemClass={EmailItem} />
+    <SearchableEmailList emails={emails} />
   </div>,
   document.getElementById('content')
 );
