@@ -1,0 +1,8 @@
+# Vim swap files
+.*.sw*
+
+# Built things
+build/
+
+# Node modules
+node_modules/
